@@ -20,7 +20,9 @@
     "test": "yarn test:unit && yarn test:features",
     "test:unit": "NODE_ENV=test jest",
     "test:features": "yarn test:mooc:backend:features",
-    "test:mooc:backend:features": "NODE_ENV=test cucumber-js -p mooc_backend"
+    "test:mooc:backend:features": "NODE_ENV=test cucumber-js -p mooc_backend",
+    "build:tsc": "tsc -p tsconfig.prod.json",
+    "build:clean": "rm -r dist; exit 0"
   },
   "dependencies": {
     "body-parser": "1.20.1",
