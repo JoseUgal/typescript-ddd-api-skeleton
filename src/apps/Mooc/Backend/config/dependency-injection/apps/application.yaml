@@ -1,0 +1,8 @@
+services:
+  Apps.Mooc.Controller.Status.StatusGetController:
+    class: ../../../Controller/Status/StatusGetController
+    arguments: []
+
+  Apps.Mooc.Controller.Courses.CoursePutController:
+    class: ../../../Controller/Courses/CoursePutController
+    arguments: ['@Mooc.Courses.Application.CourseCreator']

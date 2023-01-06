@@ -1,0 +1,65 @@
+{
+  "name": "typescript-ddd-api-skeleton",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/JoseUgal/typescript-ddd-api-skeleton"
+  },
+  "engines": {
+    "node": ">=16.17.0",
+    "npm": ">=8.19.2"
+  },
+  "private": true,
+  "scripts": {
+    "dev:mooc:backend": "NODE_ENV=dev ts-node-dev --ignore-watch node_modules ./src/apps/Mooc/Backend/start.ts",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write 'src/**/*.{ts,js}'",
+    "git:commit": "sui-mono commit",
+    "git:check": "sui-mono check",
+    "test": "yarn test:unit && yarn test:features",
+    "test:unit": "NODE_ENV=test jest",
+    "test:features": "yarn test:mooc:backend:features",
+    "test:mooc:backend:features": "NODE_ENV=test cucumber-js -p mooc_backend"
+  },
+  "dependencies": {
+    "body-parser": "1.20.1",
+    "bson": "4.7.0",
+    "compression": "1.7.4",
+    "errorhandler": "1.5.1",
+    "express": "4.18.2",
+    "express-promise-router": "4.1.1",
+    "express-validator": "6.14.2",
+    "glob": "8.0.3",
+    "helmet": "6.0.1",
+    "http-status": "1.5.3",
+    "node-dependency-injection": "2.7.3",
+    "ts-node": "10.9.1",
+    "typescript": "4.9.4",
+    "uuid": "9.0.0",
+    "uuid-validate": "0.0.3"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "8.10.0",
+    "@faker-js/faker": "7.6.0",
+    "@s-ui/mono": "2.34.0",
+    "@types/compression": "1.7.2",
+    "@types/errorhandler": "1.5.0",
+    "@types/express": "4.17.15",
+    "@types/glob": "8.0.0",
+    "@types/http-status": "1.1.2",
+    "@types/jest": "29.2.4",
+    "@types/node": "18.11.15",
+    "@types/supertest": "2.0.12",
+    "@types/uuid-validate": "0.0.1",
+    "@typescript-eslint/eslint-plugin": "5.46.1",
+    "@typescript-eslint/parser": "5.46.1",
+    "eslint": "8.29.0",
+    "eslint-config-prettier": "8.5.0",
+    "jest": "29.3.1",
+    "prettier": "2.8.1",
+    "supertest": "6.3.3",
+    "ts-jest": "29.0.3",
+    "ts-node-dev": "2.0.0"
+  }
+}

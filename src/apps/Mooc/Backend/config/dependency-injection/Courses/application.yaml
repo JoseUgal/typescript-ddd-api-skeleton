@@ -1,0 +1,8 @@
+services:
+  Mooc.Courses.Domain.CourseRepository:
+    class: ../../../../../../Contexts/Mooc/Courses/Infrastructure/Persistence/File/FileCourseRepository
+    arguments: []
+
+  Mooc.Courses.Application.CourseCreator:
+    class: ../../../../../../Contexts/Mooc/Courses/Application/CourseCreator
+    arguments: ['@Mooc.Courses.Domain.CourseRepository']
