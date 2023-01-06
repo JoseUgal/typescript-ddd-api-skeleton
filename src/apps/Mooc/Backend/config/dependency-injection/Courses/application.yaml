@@ -1,7 +1,7 @@
 services:
   Mooc.Courses.Domain.CourseRepository:
-    class: ../../../../../../Contexts/Mooc/Courses/Infrastructure/Persistence/File/FileCourseRepository
-    arguments: []
+    class: ../../../../../../Contexts/Mooc/Courses/Infrastructure/Persistence/Mongo/MongoCourseRepository
+    arguments: ['@Mooc.ConnectionManager']
 
   Mooc.Courses.Application.CourseCreator:
     class: ../../../../../../Contexts/Mooc/Courses/Application/CourseCreator

@@ -1,19 +1,11 @@
-export abstract class NumberValueObject {
-  readonly value: number;
+import { ValueObject } from './ValueObject';
 
+export abstract class NumberValueObject extends ValueObject<number> {
   constructor(value: number) {
-    this.value = value;
-  }
-
-  equalsTo(other: NumberValueObject): boolean {
-    return this.value === other.value;
+    super(value);
   }
 
   isBiggerThan(other: NumberValueObject): boolean {
     return this.value > other.value;
-  }
-
-  toString(): number {
-    return this.value;
   }
 }
