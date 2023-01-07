@@ -3,7 +3,7 @@ import { CourseRepository } from '../../../../../../src/Contexts/Mooc/Courses/Do
 import { CourseMother } from '../../Domain/CourseMother';
 import { EnvironmentArranger } from '../../../../Shared/Infrastructure/Arranger/EnvironmentArranger';
 
-const repository: CourseRepository = container.get('Mooc.Courses.Domain.MongoCourseRepository');
+const repository: CourseRepository = container.get('Mooc.Courses.Domain.CourseRepository');
 const arranger: Promise<EnvironmentArranger> = container.get('Mooc.MongoEnvironmentArranger');
 
 beforeEach(async () => {
